@@ -1,18 +1,12 @@
 import React from 'react'
 import './menu.css'
-const Menu = () => (
+import TimerType from './timerType';
+
+const TimerSelector = ({image, name}) => (
     <div className="menu-container">
-        <div className="shadow-container">
-            <div className="flex-center">
-                <img src={process.env.PUBLIC_URL + '/img/pomodoro.png'} />
-            </div>
-        </div>
-        <div className="shadow-container">
-            <div className="flex-center">
-                <img src={process.env.PUBLIC_URL + '/img/pomodoro_green.png'} />
-            </div>
-        </div>
+        <TimerType image="pomodoro.png" name="Vanilla Timer"/>
+        <TimerType image="pomodoro_green.png" name="Custom Timer"/>
     </div>
 )
 
-export default Menu
+export default TimerSelector
